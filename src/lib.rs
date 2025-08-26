@@ -189,7 +189,7 @@ impl Build {
             .arg("no-zlib")
             .arg("no-zlib-dynamic")
             // Disable IBM CA, IBM Z, and z90crypt engines
-            // .arg("no-atexit") only available since OpenSSL 3.2.2
+            .arg("no-atexit") //only available since OpenSSL 3.2.2
             .arg("no-asm")
             // Avoid multilib-postfix for build targets that specify it
             .arg("--libdir=lib");
