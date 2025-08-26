@@ -188,6 +188,9 @@ impl Build {
             .arg("no-comp")
             .arg("no-zlib")
             .arg("no-zlib-dynamic")
+            // Disable IBM CA, IBM Z, and z90crypt engines
+            .arg("no-atexit")
+            .arg("no-asm")
             // Avoid multilib-postfix for build targets that specify it
             .arg("--libdir=lib");
 
